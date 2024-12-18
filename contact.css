@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --maincolor:#83b377;
+    --secondcolor:#dbdf20;
+    --thirdcolor:#d1db48;
+    --textcolor:#2c2323;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: "Inter", sans-serif;
+}
+
+
+.book .row{
+    display: flex;
+    align-items: left;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+ 
+.book .row .image{
+    flex:1 1 45rem;
+}
+
+.book .row .image img{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.book .row{
+    padding: 40px;
+}
+.book .row form{
+    flex:1 1 45rem;
+    background: #fff;
+    border: 2px solid var(--textcolor);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin: 30px;
+}
+
+.book .row form h3{
+    color:var(black);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.book .row form .box{
+    width: 100%;
+    margin:.7rem 0;
+    border-radius: .5rem;
+    border:1px solid var(--maincolor);
+    font-size: 1.6rem;
+    color: var(--maincolor);
+    text-transform: none;
+    padding: 1rem;
+}
+
+.book .row form .btn{
+    padding:1rem 4rem;
+}

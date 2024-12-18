@@ -42,7 +42,20 @@ header{
     background-color: white;
 }
 
+.heading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
 
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
 
 .logo{
     width: 100px;
@@ -236,9 +249,10 @@ header{
 
 .main-about{
     position: relative;
-    padding: 2rem 7%;
+    padding: 20rem 7%;
     width: 100%;
     overflow: hidden;
+
 }
 .blur-bg {
     position: absolute;
@@ -387,6 +401,68 @@ header{
 .doc-details i{
     padding: 1rem;
     font-size: 2.5rem;
+}
+
+.footer{
+    background-color: hwb(152 56% 23%);
+}
+
+.footer .box-container{
+    display: block;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+    justify-items: center;
+}
+.footer .box-container .box{
+    display: block;
+    padding: 20px;
+    justify-items: center;
+
+}
+
+.footer .box-container .box .info{
+    display: flex;
+
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .info a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding: 1rem 1rem;
+    /* border: 1px solid black; */
+    margin: 10px;
+    background-color: rgb(240, 228, 228);
+    border-radius: 10px;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:2rem;
+
+}
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color:var(--light-color);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color:var(--green);
 }
 
 
