@@ -8,58 +8,73 @@ menubar.onclick = () =>{
 
 //front end validation functions
 
-// Select the form element
-const form = document.querySelector('form');
+// checking the user inputs
+function validateEnquiryForm(event) {
+    // holding data untill the validation is done
+    event.preventDefault();
 
-// Add event listener to handle form submission
-form.addEventListener('submit', function(event) {
-// Prevent form submission for validation
-event.preventDefault();
+    // getting all the elemnts from html form
+    const name = document.getElementById("name").value.trim();
+    const age = document.getElementById("age").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const details = document.getElementById("details").value.trim();
 
-// Get form field values
-const name = document.querySelector('input[placeholder="your name"]').value.trim();
-const age = document.querySelector('input[placeholder="your age"]').value.trim();
-const number = document.querySelector('input[placeholder="your number"]').value.trim();
-const email = document.querySelector('input[placeholder="your email"]').value.trim();
-const date = document.querySelector('input[type="date"]').value.trim();
+    //handling erro mesages
+    let errors = [];
 
-// Validation flags
-let isValid = true;
+    //validating the name
+    if (!name) {
+        errors.push("Full name is required!");
+    } else if (name.length < 3) {
+        errors.push("Name should be more than 3 charactors!");
+    }
 
-// Name validation
-if (name === "") {
-    alert("Please enter your name.");
-    isValid = false;
+    //validating the age
+    if (!age) {
+        errors.push("Enter your age!");
+    } else if (isNaN(age) || age <= 0 || age > 120) {
+        errors.push("Enter a valid age!");
+    }
+
+    //validating contact number
+    if (!phone) {
+        errors.push("Please enter your phone number!");
+    } else if (!/^\d{10}$/.test(phone)) {
+        errors.push("Please enter a valid telephone number! (telephone number should required 10 digits)");
+    }
+
+    //validating email
+    if (!email) {
+        errors.push("Please enter your email!");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors.push("Please provde an valid email address!");
+    }
+
+    //validating subject
+    if (!subject) {
+        errors.push("Please provide a subject.");
+    } else if (subject.length < 3) {
+        errors.push("Subject should be more than 3 characters long!");
+    }
+
+    //validating details
+    if (!details) {
+        errors.push("Please provide enquiry details");
+    } else if (details.length < 10) {
+        errors.push("Message/Inquiry details should be at least 10 characters long.");
+    }
+
+    //diplaying the array of errors or the submission completion
+    if (errors.length > 0) {
+        alert("Please check these error:\n\n" + errors.join("\n"));
+    } else {
+        alert("Your form has been successfully submitted. Thank you!");
+        document.querySelector("form").submit();
+    }
 }
 
-// Age validation (Must be a number and between 0 and 120)
-if (isNaN(age) || age < 0 || age > 120) {
-    alert("Please enter a valid age between 0 and 120.");
-    isValid = false;
-}
+//attach the validation to the event
+document.querySelector("form").addEventListener("submit", validateEnquiryForm);
 
-// Phone number validation (Must be a 10-digit number)
-if (!/^\d{10}$/.test(number)) {
-    alert("Please enter a valid 10-digit phone number.");
-    isValid = false; 
-}
-
- // Email validation
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address.");
-    isValid = false;
-}
-
-// Date validation (Ensure a date is selected)
-if (date === "") {
-    alert("Please select a date for the appointment.");
-    isValid = false;
-}
-
-// If all validations pass, allow form submission
-if (isValid) {
-    alert("Form submitted successfully!");
-    form.submit(); // Submit the form
-}
-});

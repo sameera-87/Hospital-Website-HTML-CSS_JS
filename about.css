@@ -22,12 +22,49 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s linear;
     font-family: "Inter", sans-serif;
 }
+
+.vm-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 20px;
+    padding-bottom: 150px;
+    text-align: center;
+    background-color: #5dd6b2;
+}
+
+.vm-content .about-vm{
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0e8e8;
+    border: 1px solid #d4bebe;
+    width: 50%;
+    box-shadow: 10px 10px 5px #d4bebe;
+    border-radius: 25px;
+    height: 100%;
+}
+.vm-content .about-vm h2{
+    padding: 5px;
+    color: var(--maincolor);
+    text-align: center;   
+    font-size: 3rem; 
+}
+.vm-content .about-vm p{
+    padding: 10px;
+    color: var(--textcolor);
+    text-align: center;   
+    font-size: 2.5rem; 
+}
+
 .doctors{
     padding: 20px;
+    background-image: url(images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .doctors .box-container{
     display: grid;

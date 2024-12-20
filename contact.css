@@ -20,53 +20,154 @@
 }
 
 
-.book .row{
+.enquiry {
+    background-image: url(images/bg6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
     display: flex;
-    align-items: left;
-    flex-wrap: wrap;
-    gap:2rem;
-}
- 
-.book .row .image{
-    flex:1 1 45rem;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #ebe0e0; 
+    
 }
 
-.book .row .image img{
-    width: 100%;
-    margin-top: 30px;
-}
-
-.book .row{
-    padding: 40px;
-}
-.book .row form{
-    flex:1 1 45rem;
-    background: #fff;
-    border: 2px solid var(--textcolor);
-    box-shadow: var(--box-shadow);
+.enquiry h3{
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
     text-align: center;
-    padding: 2rem;
-    border-radius: .5rem;
-    margin: 30px;
 }
 
-.book .row form h3{
-    color:var(black);
-    padding-bottom: 1rem;
-    font-size: 3rem;
+.enquiry .equiry-form{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #e3e4e0;
+    border: 1px solid white;
+    backdrop-filter: blur(15px);
 }
 
-.book .row form .box{
+.data-table {
     width: 100%;
-    margin:.7rem 0;
-    border-radius: .5rem;
-    border:1px solid var(--maincolor);
-    font-size: 1.6rem;
-    color: var(--maincolor);
-    text-transform: none;
-    padding: 1rem;
+    border-spacing: 10px; 
 }
 
-.book .row form .btn{
-    padding:1rem 4rem;
+.data-table td {
+    padding: 10px;
+    vertical-align: middle;
 }
+
+.labels {
+    text-align: left;
+    font-size: 16px;
+    color: #181010;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+
+.box {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.box:focus {
+    border-color: #007bff; 
+
+}
+
+.enquiry .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.enquiry .btn:hover {
+    background: #0056b3;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.contact-info .box {
+    margin: 20px;
+    background-color: #f5f5f5; 
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; 
+}
+
+.contact-info .box h3 {
+    font-size: 22px; 
+    color: #333; 
+    text-transform: uppercase; 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #007BFF; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-info .box .info {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.contact-info .box .info a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info .box .info a:hover {
+    color: #007BFF;
+    transform: translateX(5px);
+}
+
+.contact-info .box .info i {
+    font-size: 20px; 
+    color: #007BFF; 
+}
+
+.contact-info .box .info a:last-of-type {
+    word-wrap: break-word; 
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
